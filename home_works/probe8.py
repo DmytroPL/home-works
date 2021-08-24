@@ -175,7 +175,6 @@ for day in range(365):
     cprint(serge, color='cyan')
     cprint(masha, color='cyan')
     cprint(home, color='cyan')
-# masha.buy_fur_cot()
 cprint(
     'Всего заработано денег {}, куплено шуб {}, куплено еды {}'.format(Man.sum_money, Man.count_fur_coat, Man.sum_food),
     color='green')
