@@ -44,13 +44,11 @@ class Husband(Man):
 
     def __init__(self, name):
         super().__init__(name)
-        # self.house = None
 
     def __str__(self):
         return super().__str__()
 
     def act(self):
-        # self.fullness -= 10
         dice = randint(1, 3)
         if self.fullness <= 0:
             cprint('{} умер от голода'.format(self.name), color='red')
@@ -96,7 +94,6 @@ class Wife(Man):
     def __init__(self, name):
         super().__init__(name)
         self.fur_coat = 0
-        # self.house = None
 
     def __str__(self):
         return super().__str__()
@@ -135,7 +132,6 @@ class Wife(Man):
         cprint('{} убрала в доме'.format(self.name), color='yellow')
 
     def act(self):
-        # self.fullness -= 10
         dice = randint(1, 3)
         if self.fullness <= 0:
             cprint('{} умерла от голода'.format(self.name), color='red')
@@ -166,7 +162,6 @@ serge = Husband(name='Сережа')
 masha = Wife(name='Маша')
 serge.go_house(home)
 masha.go_house(home)
-# print(dir(masha))
 for day in range(365):
     cprint('================== День {} =================='.format(day), color='red')
     home.dirt += 5
